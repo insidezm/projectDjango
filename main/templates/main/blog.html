@@ -1,0 +1,51 @@
+{% extends 'main/home.html' %}
+{% load static %}
+
+{% block title %}ShiftLab Анализ тональности текста{{ title }}{% endblock %}
+
+{% block content1 %}
+
+
+<body>
+
+    
+    <!-- *********  Main part – headline ********** -->
+    
+        
+        <div id="main_part_inner">
+            <div id="main_part_inner_in">
+        
+            <h2>Официальный блог ShiftLab.ru</h2>
+
+            
+            </div>
+            
+        </div>
+        
+        
+        <!-- *********  Content  ********** -->
+        
+        <div id="content_inner" style="height: 600px;">
+
+           <h3 style="line-height: 160%;"> Статьи про тональность текста, его анализ и используемые методы, а также новости про машинное обучение.</h3>
+
+        <div class="container2">
+            <a href="{% url 'blog' %}"><img src="{% static 'main/img/l3.png' %}" class="container_img2" alt="l2"></a>
+
+            <h3><b>Блог скоро обновится</b></h3>
+        </div>
+
+        </div>
+        
+
+         
+<script>
+// script for testimonial' tabs
+$(function() {
+    $("ul.controls").tabs("div.testimonials > div");
+});
+</script>
+
+</body>
+
+{% endblock content1 %}

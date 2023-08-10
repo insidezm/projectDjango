@@ -1,0 +1,80 @@
+{% extends 'main/home.html' %}
+{% load static %}
+
+{% block title %}ShiftLab Анализ тональности текста{{ title }}{% endblock %}
+
+{% block content1 %}
+
+
+<body>
+    
+    <!-- *********  Main part – headline ********** -->
+    
+        
+        <div id="main_part_inner">
+            <div id="main_part_inner_in">
+        
+            <h2>Контакты</h2>
+
+            
+            </div>
+            
+        </div>
+        
+        
+        <!-- *********  Content  ********** -->
+        
+        <div id="content_inner">
+            
+            <!-- *** contact form *** -->
+            
+           <h3>Напишите нам</h3>
+           
+           <form action="#" method="post" class="formit">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Ваше имя"/>
+                <input type="text" name="email" placeholder="EMAIL"/>
+                <input type="text" name="url" placeholder="Организация (необязательно)"/>
+                <textarea name="message" placeholder="Введите текст здесь"></textarea>
+                <input type="submit" class="button_submit" value="ОТПРАВИТЬ">
+            </form>
+
+            <div class="cara"></div>
+            
+            <h3>Контактная информация</h3>
+            
+            <div class="contactinfo">
+                <span class="ico_mapmark"><b>Екатеринбург, улица Мира, 19</b></span>
+            </div>
+            
+            <div class="contactinfo">
+                <span class="ico_message"><b>insidezm@gmail.com</b></span>
+            </div>
+            
+            <div class="contactinfo">
+                <span class="ico_iphone"><b>(+123) 456 789 012</b></span>    
+            </div>
+            
+            <hr class="cleanit">
+            
+            
+            <div class="mapit">
+                <iframe width="938" height="360" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2182.214381137105!2d60.64959821569071!3d56.84226651490704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16c2f701b3469%3A0x7e1cea92d8a2a915!2z0KPRgNCw0LvRjNGB0LrQuNC5INGE0LXQtNC10YDQsNC70YzQvdGL0Lkg0YPQvdC40LLQtdGA0YHQuNGC0LXRgiwg0KTQuNC30LjQutC-LdGC0LXRhdC90L7Qu9C-0LPQuNGH0LXRgdC60LjQuSDQuNC90YHRgtC40YLRg9GC!5e0!3m2!1sru!2sru!4v1677531070555!5m2!1sru!2sru">
+                </iframe>
+            </div>
+
+            
+        </div>
+        
+
+         
+<script>
+// script for testimonial' tabs
+$(function() {
+    $("ul.controls").tabs("div.testimonials > div");
+});
+</script>
+
+</body>
+
+{% endblock content1 %}

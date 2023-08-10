@@ -1,0 +1,117 @@
+{% extends 'main/home.html' %}
+{% load static %}
+
+{% block title %}ShiftLab Анализ тональности текста{{ title }}{% endblock %}
+
+{% block content1 %}
+
+<body>
+    
+    <!-- *********  Main part – headline ********** -->
+    
+        
+        <div id="main_part_inner">
+            <div id="main_part_inner_in">
+        
+            <h2>Информация</h2>
+
+            
+            </div>
+            
+        </div>
+        
+        
+        <!-- *********  Content  ********** -->
+        
+        <div id="content_inner">
+            
+            <!-- ***** Out team + portraits ***** -->
+           <a name="example"></a>
+           <h3>Данный ресурс предназначен для бесплатного анализа текста на его тональность. После загрузки текста, нейросеть его обработает и выдаст результат.</h3>
+
+           <p class="teamline">Для понимания работы нейросети посмотрите на примеры анализа других текстов.</p>
+
+           <div class="sixths_team">
+                <h4>Политика<br>
+                <span>смотреть</span>
+                </h4>
+                <a href="#"><img src="{% static 'main/img/n1.jpeg' %}" alt="team1"></a>
+                <a href="#" class="profession">Политика</a>
+           </div>
+           
+           <div class="sixths_team">
+                <h4>Медицина<br>
+                <span>смотреть</span>
+                </h4>
+                <a href="#"><img src="{% static 'main/img/n2.jpeg' %}" alt="team2"></a>
+                <a href="#" class="profession">Медицина</a>
+           </div>
+
+           <div class="sixths_team">
+                <h4>Новости<br>
+                <span>смотреть</span>
+                </h4>
+                <a href="#"><img src="{% static 'main/img/n3.jpeg' %}" alt="team3"></a>
+                <a href="#" class="profession">Новости</a>
+           </div>
+           
+           <div class="sixths_team">
+                <h4>Погода<br>
+                <span>смотреть</span>
+                </h4>
+                <a href="#"><img src="{% static 'main/img/n4.jpeg' %}" alt="team4"></a>
+                <a href="#" class="profession">Погода</a>
+           </div>
+           
+           <div class="sixths_team">
+                <h4>Отношения<br>
+                <span>смотреть</span>
+                </h4>
+                <a href="#"><img src="{% static 'main/img/n5.jpeg' %}" alt="team5"></a>
+                <a href="#" class="profession">Отношения</a>
+           </div>
+
+           <div class="sixths_team">
+                <h4>Музыка<br>
+                <span>смотреть</span>
+                </h4>
+                <a href="#"><img src="{% static 'main/img/n6.jpeg' %}" alt="team6"></a>
+                <a href="#" class="profession">Музыка</a>
+           </div>
+           
+           <hr class="cleanit">
+            
+            
+            <!-- ***** History, milestones ***** -->           
+
+        <div class="container1">
+            <a href="{% url 'info' %}"><img src="{% static 'main/img/15ii (1).jpg' %}" class="container_img1" alt="l2"></a>
+        </div>
+
+        <div class="history_blok">
+            
+            <h3>Над развитием проекта ShiftLab.ru работает команда опытных специалистов. Мы ставим перед собой глобальные цели и ежедневно делаем сервис лучше. Находя нестандартные подходы и схемы, команда ShiftLab.ru реализует актуальные идеи в сфере IT, интернет-коммерции и веб-райтинга.</h3>
+            <br>
+            <h3>Наша задача состоит в развитии и бесплатном распространении рабочего ПО. Проект ShiftLab.ru предлагает многофункциональный и эффективный инструмент работы, который позволит каждому гарантированно получить качественные материалы.</h3>
+
+                
+                <hr class="cleanit">
+            
+        </div>
+        
+            
+        <div class="moreabout">
+            <p>Если у вас есть идеи по развитию проекта, <b>помогите нам стать лучше</b> , оставьте отзыв по ссылке ниже или загрузите <b>файл</b> с вашими предложениями.</p>
+            <a href="#" class="button_dark">НАПИСАТЬ</a>
+        </div>
+
+
+        <!-- ***** Services ***** -->
+
+
+        </div>
+         
+
+</body>
+
+{% endblock content1 %}

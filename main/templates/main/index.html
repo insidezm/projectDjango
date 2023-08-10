@@ -1,0 +1,24 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<div class="section-top">
+    <img src="{% static 'main/img/12i.jpeg' %}" class="img-fluid">
+</div>
+
+<div class="features">
+    <h1>{{ title }}</h1>
+    <p>Загрузите файл с текстом в формате .txt или напишите текст в форму ниже</p>
+    <div id="search_wrapper">
+        <form action="/your-name/" method="post">
+            {% csrf_token %}
+            <label for="your_name">Текст: </label>
+            <textarea name="Text1" cols="40" rows="5"></textarea>
+        </form>
+        <button class="btn btn-warning">Загрузить</button>
+    </div>
+</div>
+{% endblock %}

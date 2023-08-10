@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    
+    <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+    
+    <link rel="stylesheet" href="{% static 'main/css/reset.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'main/css/styl.css' %}" type="text/css">
+        
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+    <!-- *********  Header  ********** -->
+    
+    <div id="header">
+        <div id="header_in">
+
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'main/img/logo.svg' %}" alt="Logo"></a>
+        <h1><a href="{% url 'home' %}"><b>Shift</b>Lab</a></h1>
+        
+        <div id="menu">
+         <ul>
+            <li><a href="{% url 'info' %}"><b>Информация</b></a></li>
+            <li><a href="{% url 'ourwork' %}"><b>О проекте</b></a></li>
+            <li><a href="{% url 'blog' %}"><b>Блог</b></a></li>
+            <li><a href="{% url 'contacts' %}"><b>Контакты</b></a></li>
+         </ul>
+        </div>
+        
+        </div>
+    </div>
+    
+    <!-- *********  Main part (slider)  ********** -->
+    
+    {% block content1 %}
+
+    {% endblock content1 %}
+
+    <!-- *********  Footer  ********** -->
+    
+    <hr class="cleanit">
+    
+     <div id="footer">
+        <div id="footer_in">
+            
+            <p>© 2023 <a href="#"><b> Shift</b>Lab</a></p>
+
+            <span>Author: <a href="#">insidezm</a></span>
+
+        </div>
+    </div>
+         
+<script>
+// script for testimonial' tabs
+$(function() {
+    $("ul.controls").tabs("div.testimonials > div");
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+{% extends 'main/home.html' %}
+{% load static %}
+
+{% block title %}ShiftLab Анализ тональности текста{{ title }}{% endblock %}
+
+{% block content1 %}
+<body>
+
+    <!-- *********  Header  ********** -->
+    
+    <!-- *********  Main part (slider)  ********** -->
+    
+        
+        <div id="main_part">
+            <div id="main_part_in">
+        
+            <h2>Анализ тональности текста нейросетью</h2>
+            
+            <p>Узнайте тональность текста и проводите анализы благодаря полученному результату.</p>
+            
+            </div>
+            
+            
+            <div class="button_main">
+                <div class="pxline"></div>
+                <a href="#" class="button_dark">Попробовать</a>
+            </div>
+            
+        </div>
+        
+        
+        <!-- *********  Content  ********** -->
+        
+        <div id="content">
+            
+            <div class="thirds">
+                <h3>Наш проект</h3>
+                <p>Сервис онлайн проверки и анализа тональности текста Shiftlab.ru бесплатно определит тональность вашего текста и укажет результат в %. Эффективные алгоритмы позволили сделать проверку глубокой и точной.</p>
+            </div>
+            
+            <div class="thirds">
+                <h3>Как это работает?</h3>
+                <p><a href="http://127.0.0.1:8000/info/#example">Посмотрите</a> пример для наглядного понимания как работает нейросеть.</p>
+            </div>
+            
+            <div class="thirds">
+                <h3>При регистрации</h3>
+                <p>Расширенные возможности. При регистрации на сервисе у вас будут расширены ограничения проверки, предназначенные для гостей, и вы получите возможность сохранять результаты анализа.</p>
+            </div>
+            
+            <hr class="cleanit">
+            
+            <div class="banner1">
+                <p>Сохраните результат анализа своего текста<p>
+                <a href="#" class="button_dark">Зарегистрироваться</a>
+            </div>
+                
+                
+            <!-- ****  Recent works  ***** -->        
+            
+            <h3>Какие методы мы используем при анализе? </h3>
+            
+            <div class="fourths_portfolio">
+                <h4>Наивный байесовский классификатор (NB)<br>
+                <span>смотреть</span>
+                </h4>
+                <a href="http://127.0.0.1:8000/ourwork/#n1"><img src="{% static 'main/img/m1.png' %}" alt="item1"></a>
+            </div>
+            
+            <div class="fourths_portfolio">
+                <h4>Метод k ближайших соседей<br>
+                <span>смотреть</span>
+                </h4>
+                <a href="http://127.0.0.1:8000/ourwork/#n2"><img src="{% static 'main/img/m2.jpg' %}" alt="item2"></a>
+            </div>
+            
+            <div class="fourths_portfolio">
+                <h4>Классификатор Rocchio<br>
+                <span>смотреть</span>
+                </h4>
+                <a href="http://127.0.0.1:8000/ourwork/#n3"><img src="{% static 'main/img/m3.jpeg' %}" alt="item3"></a>
+            </div>
+            
+            <div class="fourths_portfolio">
+                <h4>Метод опорных векторов (SVM)<br>
+                <span>смотреть</span>
+                </h4>
+                <a href="http://127.0.0.1:8000/ourwork/#n4"><img src="{% static 'main/img/m4.png' %}" alt="item4"></a>
+            </div>
+            
+            <hr class="cleanit">
+            
+            <p class="youlike">Нравится ли вам то, что вы видите? Вы можете <a href="#">оставить отзыв</a> или <a href="{% url 'contacts' %}">связаться с нами</a>. Так же вы можете помочь проекту и сделать <a href="#">пожертвование</a>.</p>
+            
+            <div class="cara"></div>
+            
+            
+            <!-- ****  About & Testimonials  ***** --> 
+            
+            
+            <div class="about_blok">
+                <h3>Информация</h3>
+                <p class="about">Мы - молодая команда разработчиков из Екатеринбурга. Проект поддерживается собственными силами и был реализован в рамках написания магистерской диссертации при обучении в УрФУ, Бизнес-информатика.</p>
+                
+                <a href="{% url 'ourwork' %}" class="button_light">Узнать больше</a>
+                <!--
+                <div class="banner">
+                    <a href="{% url 'home' %}"><img src="{% static 'main/img/l1.png' %}" alt="l1"></a>
+                </div>
+                -->
+            </div>
+
+            
+            <div class="testimonials">
+                <div class="quote">Анализ тональности текста на высшем уровне! Я не встречал подобного в интернете, очень рад, что попал на ваш сайт. Спасибо за ваш труд.</div>
+                
+                <div class="quote">Здравствуйте! У вас довольно удобный инструмент анализа, он мне очень помог в моих исследованиях. Искренне вам благодарен за распространяемый материал в открытом доступе, обязательно буду пользоваться вашим ресурсом и посоветую своим коллегам.</div>
+                
+                <div class="quote">Это действительно работает так, как я предполагал. Выражаю благодарность за возможность бесплатного использования. За сохранность текстов при регистрации отдельное спасибо.</div>
+                <span class="testimonials_bottom"></span>
+                
+                <ul class="controls">
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+                <span class="by">Вот что о нас говорят!</span>
+            </div>
+            
+        </div>
+
+
+         
+<script>
+// script for testimonial' tabs
+$(function() {
+    $("ul.controls").tabs("div.testimonials > div");
+});
+</script>
+
+</body>
+{% endblock content1 %}
+
